@@ -1,0 +1,75 @@
+---
+import experiences from "../collections/experiences.json";
+import AboutExperience from "../components/about-experience.astro";
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="About Me">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading title="About Me" />
+
+    <img
+      src="/assets/images/heroshot.jpg"
+      class="relative z-30 w-full my-10 rounded-xl"
+    />
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      I am a UX Designer bridging the technical gap between design and
+      development. Currently at ASHM Health, I build accessible healthcare
+      solutions driven by user research and a design thinking approach.
+    </p>
+    <br />
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      My journey started in software development, building mobile apps and API
+      integrations for companies like simPRO and Talcasoft. I leveraged that
+      technical foundation to pivot into UX Design. I speak both 'designer' and
+      'developer' fluently. This unique skill set allows me to create designs
+      that are not only user-centric but also technically feasible and efficient
+      to implement.
+    </p>
+
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Experience
+    </h2>
+    <div class="px-5 py-10">
+      {
+        experiences.map((experience) => {
+          return (
+            <div class="pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700">
+              <AboutExperience
+                dates={experience.dates}
+                role={experience.role}
+                company={experience.company}
+                description={experience.description}
+                logo={experience.logo}
+              />
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Let's Connect
+    </h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      If you want to stay up to date with my work be sure to <a
+        href="https://www.linkedin.com/in/otman-ouali"
+        target="_blank"
+        class="text-indigo-600 underline">linkedin</a
+      >, or you can send me an <a href="" class="text-indigo-600 underline"
+        >email</a
+      > and I'll be sure to get back to you.
+    </p>
+  </section>
+</Layout>

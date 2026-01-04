@@ -1,0 +1,38 @@
+[
+	{
+		"dates": "2024 · Present",
+		"role": "UX Engineer",
+		"company": "ASHM Health",
+		"description": "UX Design, Research and occasional UI Development.",
+		"logo": "/assets/images/experiences/ashm.ico"
+	},
+	{
+		"dates": "2023 · 2024",
+		"role": "UX Designer | Freelance",
+		"company": "HYPERHQ",
+		"description": "Working on multiple exciting new products and projects to help upcoming startups launch in Australia with their first MVP.",
+		"logo": "/assets/images/experiences/hyperhq.ico"
+	},
+	
+	{
+		"dates": "2022 · 2022 ",
+		"role": "UX Designer | Contract",
+		"company": "NRL Learning",
+		"description": "Research and designed of a potential solution to grow volunteers signing up for the National Rugby League coaching program.",
+		"logo": "/assets/images/experiences/nrl.ico"
+	},
+	{
+		"dates": "2021 · 2022",
+		"role": "Software Developer",
+		"company": "SIMPRO",
+		"description": "Worked as a front-end mobile developer on the simPRO app, focusing on improving user experience and implementing new features using modern web technologies.",
+		"logo": "/assets/images/experiences/simpro.ico"
+	}, 
+	{
+		"dates": "2020 · 2021",
+		"role": "Junior Software Developer",
+		"company": "Talcasoft",
+		"description": "Worked on an in-house software for the transport industry using Dot.NET Framework to create api integrations.",
+		"logo": "/assets/images/experiences/talcasoft.ico"
+	}
+]

@@ -1,0 +1,22 @@
+<div id="hero-lottie" class="w-full max-w-5xl mx-auto dark:invert"></div>
+
+<script>
+  import lottie from "lottie-web";
+  // We need to pass the JSON data from the frontmatter to the script
+  // A clean way in Astro is using a data attribute or importing directly if possible
+  // Here we import it inside the script tag for client-side execution if the bundler allows,
+  // OR simpler: pass the path. For now, let's use the import method which usually works with Vite.
+  import animationData from "../assets/Hero-Section-Anim.json";
+
+  const container = document.getElementById("hero-lottie");
+
+  if (container) {
+    lottie.loadAnimation({
+      container: container,
+      renderer: "svg",
+      loop: false, // Set to true if you want looping
+      autoplay: true,
+      animationData: animationData,
+    });
+  }
+</script>

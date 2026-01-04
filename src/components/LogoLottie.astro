@@ -1,0 +1,28 @@
+---
+
+---
+
+<div class="nav-logo-lottie w-48 h-48 cursor-pointer dark:invert"></div>
+
+<script>
+  import lottie from "lottie-web";
+  // Ensure logo.json exists in src/assets/
+  import logoData from "../assets/Logo-Anim.json";
+
+  const containers = document.querySelectorAll(".nav-logo-lottie");
+
+  containers.forEach((container) => {
+    const anim = lottie.loadAnimation({
+      container: container,
+      renderer: "svg",
+      loop: false,
+      autoplay: true, // Plays once on load
+      animationData: logoData,
+    });
+
+    // Replay on hover
+    container.addEventListener("mouseenter", () => {
+      anim.goToAndPlay(0);
+    });
+  });
+</script>
