@@ -2,29 +2,33 @@
 
 ---
 
-<a href="/" class="block">
-  <div id="nav-logo-lottie" class="w-8 h-8 cursor-pointer dark:invert"></div>
+<!-- Wrapped div in anchor tag, removed href from div -->
+<a href="/" class="block w-56 h-56" aria-label="Home">
+  <div
+    id="nav-logo-lottie"
+    class="w-full h-full cursor-pointer transition-filters duration-300 dark:invert"
+  >
+  </div>
 </a>
 
 <script>
   import lottie from "lottie-web";
-  // Ensure logo.json exists in src/assets/
+  // Ensure this path is correct based on your folder structure
   import logoData from "../assets/Logo-Anim.json";
 
-  const containers = document.querySelectorAll(".nav-logo-lottie");
+  const container = document.getElementById("nav-logo-lottie");
 
-  containers.forEach((container) => {
+  if (container) {
     const anim = lottie.loadAnimation({
       container: container,
       renderer: "svg",
       loop: false,
-      autoplay: true, // Plays once on load
+      autoplay: true,
       animationData: logoData,
     });
 
-    // Replay on hover
     container.addEventListener("mouseenter", () => {
       anim.goToAndPlay(0);
     });
-  });
+  }
 </script>
