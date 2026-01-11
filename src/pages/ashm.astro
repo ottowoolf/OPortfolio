@@ -1,0 +1,369 @@
+---
+import Layout from "../layouts/main.astro";
+// We don't need Navbar here as main.astro handles it
+
+// Assets (Update these paths with your real images in /public/assets/images/)
+const heroImage =
+  "https://placehold.co/1920x1080/2563EB/ffffff?text=ASHM+Hero+Visual";
+const desktopUI =
+  "https://placehold.co/1200x800/f3f4f6/9ca3af?text=High+Fidelity+Desktop+UI";
+const mobileUI1 =
+  "https://placehold.co/600x1000/ffffff/e5e7eb?text=Mobile+Menu";
+const mobileUI2 =
+  "https://placehold.co/600x1000/ffffff/e5e7eb?text=Search+Filters";
+const wireframe =
+  "https://placehold.co/1200x600/e5e7eb/9ca3af?text=Wireframe+Evolution";
+---
+
+<Layout title="ASHM Website Redesign">
+  <div
+    class="w-full bg-white dark:bg-neutral-950 transition-colors duration-300"
+  >
+    <!-- 1. THE HOOK: Full Bleed Hero -->
+    <header
+      class="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden bg-slate-900"
+    >
+      <div class="absolute inset-0 bg-slate-900/40 z-10"></div>
+      <img
+        src={heroImage}
+        alt="ASHM Redesign Hero"
+        class="absolute inset-0 w-full h-full object-cover opacity-80 animate-slow-zoom"
+      />
+
+      <div class="relative z-20 text-center max-w-4xl px-6 mt-20">
+        <span
+          class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md"
+        >
+          Healthcare
+        </span>
+        <h1
+          class="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-tight"
+        >
+          ASHM Health
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-slate-200 max-w-2xl mx-auto leading-relaxed font-light"
+        >
+          A complete digital transformation for Australasia's peak body for HIV
+          & sexual health medicine.
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. THE CONTEXT: Metadata Grid -->
+    <div
+      class="border-b border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-950"
+    >
+      <div class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <h3
+              class="text-xs font-bold text-gray-400 dark:text-neutral-500 uppercase tracking-widest mb-2"
+            >
+              Role
+            </h3>
+            <p class="font-medium text-gray-900 dark:text-neutral-100">
+              Lead UX Engineer
+            </p>
+          </div>
+          <div>
+            <h3
+              class="text-xs font-bold text-gray-400 dark:text-neutral-500 uppercase tracking-widest mb-2"
+            >
+              Timeline
+            </h3>
+            <p class="font-medium text-gray-900 dark:text-neutral-100">
+              6 Months (2024)
+            </p>
+          </div>
+          <div>
+            <h3
+              class="text-xs font-bold text-gray-400 dark:text-neutral-500 uppercase tracking-widest mb-2"
+            >
+              Stack
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-2 py-1 bg-gray-100 dark:bg-neutral-800 rounded text-xs font-medium text-gray-600 dark:text-neutral-300"
+                >Astro</span
+              >
+              <span
+                class="px-2 py-1 bg-gray-100 dark:bg-neutral-800 rounded text-xs font-medium text-gray-600 dark:text-neutral-300"
+                >Tailwind</span
+              >
+              <span
+                class="px-2 py-1 bg-gray-100 dark:bg-neutral-800 rounded text-xs font-medium text-gray-600 dark:text-neutral-300"
+                >CMS</span
+              >
+            </div>
+          </div>
+          <div class="flex items-center">
+            <a
+              href="https://ashm.org.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center w-full py-3 bg-slate-900 dark:bg-white text-white dark:text-black rounded-xl font-bold hover:bg-black dark:hover:bg-neutral-200 transition-all text-sm group shadow-lg"
+            >
+              Visit Live Site
+              <!-- Arrow Icon SVG -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                ><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. THE NARRATIVE -->
+    <div class="max-w-4xl mx-auto px-6 py-24 space-y-32">
+      <!-- Key Outcomes (Executive Summary) -->
+      <section
+        class="bg-blue-50 dark:bg-blue-900/20 rounded-3xl p-10 border border-blue-100 dark:border-blue-800 relative overflow-hidden"
+      >
+        <h2
+          class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-8 flex items-center gap-2"
+        >
+          Impact at a Glance
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 relative z-10">
+          <div>
+            <span
+              class="block text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 tracking-tighter"
+              >40%</span
+            >
+            <span
+              class="text-sm text-blue-900/70 dark:text-blue-200/70 font-medium leading-tight block"
+              >Increase in mobile engagement</span
+            >
+          </div>
+          <div>
+            <span
+              class="block text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 tracking-tighter"
+              >98</span
+            >
+            <span
+              class="text-sm text-blue-900/70 dark:text-blue-200/70 font-medium leading-tight block"
+              >Lighthouse Performance Score</span
+            >
+          </div>
+          <div>
+            <span
+              class="block text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 tracking-tighter"
+              >AA</span
+            >
+            <span
+              class="text-sm text-blue-900/70 dark:text-blue-200/70 font-medium leading-tight block"
+              >WCAG 2.1 Compliance Achieved</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- The Challenge -->
+      <section>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-neutral-100 mb-8"
+        >
+          The Challenge
+        </h2>
+        <p
+          class="text-xl text-gray-600 dark:text-neutral-400 leading-relaxed mb-12"
+        >
+          ASHM creates critical guidelines for thousands of doctors. Their
+          legacy site was a maze of nested PDFs and rigid CMS structures.
+          Doctors couldn't find time-sensitive information in the moment of
+          care.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="p-8 bg-white dark:bg-neutral-900 rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm"
+          >
+            <div class="w-8 h-8 text-red-500 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path
+                  d="m16.02 12 5.48 3.13a1 1 0 0 1 0 1.74L13 21.74a2 2 0 0 1-2 0L2.5 16.87a1 1 0 0 1 0-1.74L8 12"
+                ></path><path d="M12 2v20"></path><path
+                  d="m16 6-5.4-3.1a2 2 0 0 0-2.1 0L2.5 6.88a1 1 0 0 0 0 1.74L8 12"
+                ></path><path d="m21.5 6.88-5.4-3.1a2 2 0 0 0-2.1 0L8 12"
+                ></path></svg
+              >
+            </div>
+            <h3 class="font-bold text-gray-900 dark:text-neutral-100 mb-2">
+              Information Overload
+            </h3>
+            <p
+              class="text-sm text-gray-600 dark:text-neutral-400 leading-relaxed"
+            >
+              Users required 5+ clicks to reach essential guidelines.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="p-8 bg-white dark:bg-neutral-900 rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm"
+          >
+            <div class="w-8 h-8 text-orange-500 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                ></polygon></svg
+              >
+            </div>
+            <h3 class="font-bold text-gray-900 dark:text-neutral-100 mb-2">
+              Slow Performance
+            </h3>
+            <p
+              class="text-sm text-gray-600 dark:text-neutral-400 leading-relaxed"
+            >
+              Legacy WordPress backend causing 3s+ load times.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="p-8 bg-white dark:bg-neutral-900 rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm"
+          >
+            <div class="w-8 h-8 text-blue-500 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><circle cx="16" cy="4" r="1"></circle><path d="m18 19 1-7-6 1"
+                ></path><path d="m5 8 3-3 5.5 3-2.36 4.68"></path><path
+                  d="M8 14v9c0 .55.45 1 1 1h5.75l-2.35-8.88"></path><path
+                  d="M15 22c5.523 0 10-4.477 10-10S20.523 2 15 2s-10 4.477-10 10 4.477 10 10 10z"
+                ></path></svg
+              >
+            </div>
+            <h3 class="font-bold text-gray-900 dark:text-neutral-100 mb-2">
+              Accessibility Gaps
+            </h3>
+            <p
+              class="text-sm text-gray-600 dark:text-neutral-400 leading-relaxed"
+            >
+              Critical failures in WCAG compliance for medical staff.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visual Break: Wireframes -->
+      <section class="space-y-4">
+        <div
+          class="bg-gray-100 dark:bg-neutral-800 rounded-3xl overflow-hidden shadow-inner border border-gray-200 dark:border-neutral-700"
+        >
+          <img
+            src={wireframe}
+            alt="Wireframe Evolution"
+            class="w-full h-auto"
+          />
+        </div>
+        <p class="text-sm text-gray-500 text-center italic">
+          Evolution from messy sitemap to streamlined architecture.
+        </p>
+      </section>
+
+      <!-- The Solution -->
+      <section>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-neutral-100 mb-8"
+        >
+          The Solution
+        </h2>
+        <div
+          class="prose prose-xl text-gray-600 dark:text-neutral-400 mb-16 space-y-6"
+        >
+          <p>
+            We rebuilt the entire ecosystem on <strong>Astro</strong>. By moving
+            to a static architecture, we ensured instant page loads even on poor
+            hospital Wi-Fi connections.
+          </p>
+          <p>
+            We flattened the Information Architecture, introducing a "Resource
+            Hub" that uses <strong>Algolia</strong> for instant, type-ahead search
+            results, allowing doctors to find protocols in milliseconds.
+          </p>
+        </div>
+
+        <!-- High Fidelity Visuals -->
+        <div class="space-y-12">
+          <div class="group">
+            <div
+              class="rounded-3xl overflow-hidden shadow-2xl border border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900"
+            >
+              <img
+                src={desktopUI}
+                alt="Desktop UI"
+                class="w-full h-auto group-hover:scale-[1.02] transition-transform duration-700"
+              />
+            </div>
+            <p class="mt-4 text-sm text-gray-500 font-medium">
+              The new Clinical Resource Hub Dashboard
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-8">
+            <div
+              class="rounded-3xl overflow-hidden shadow-xl border border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900"
+            >
+              <img src={mobileUI1} alt="Mobile Menu" class="w-full h-auto" />
+            </div>
+            <div
+              class="rounded-3xl overflow-hidden shadow-xl border border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900"
+            >
+              <img src={mobileUI2} alt="Search Filters" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @keyframes slow-zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  .animate-slow-zoom {
+    animation: slow-zoom 20s linear infinite alternate;
+  }
+</style>
